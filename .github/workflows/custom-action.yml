@@ -10,6 +10,11 @@ jobs:
         uses: omenking/barsoom@0.0.6
         with:
           name: 'Brown'
+      - name: Hello user action step
+        id: helloUser
+        uses: omenking/barsoom@0.0.6
+        with:
+          name: 'Jay'
       # Use the output from the `hello` step
       - name: Get the Output
-        run: echo "The time was ${{ steps.hello.outputs.greeting }}"
+        run: echo "The time was ${{ steps.helloUser.outputs.greeting }}"
