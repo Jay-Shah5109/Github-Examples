@@ -6,9 +6,9 @@ jobs:
   my-context:
     runs-on: ubuntu-latest
     env:
-      MY_ACTION: ${{github.action}}
+      MY_ACTION: ${{ github.action }}
     steps:
       - name: Running context
-        run: echo "Hello ${MY_ACTION}"
+        run: echo "Hello $MY_ACTION"
     
 
