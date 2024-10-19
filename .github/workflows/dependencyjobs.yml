@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Job 2 print Statement
-        run: echo "Running Job1"
+        run: echo "Running Job2"
