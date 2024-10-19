@@ -8,7 +8,10 @@ jobs:
     steps:
       - name: Running context
         run: echo "Hello $MY_ACTION"
+      - name: Running context 2
+        run: echo "Hello $MY_ACTOR"
         env:
           MY_ACTION: ${{ github.action }}
+          MY_ACTOR: ${{ github.actor }}
     
 
