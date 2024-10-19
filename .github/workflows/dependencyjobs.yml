@@ -1,0 +1,16 @@
+name: Job Dependency Test
+
+on: ['push']
+
+jobs:
+  job1:
+    needs: job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job 1 Print Statement
+        run: echo "Job 1 has run since job 2 passed successfully"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job 2 print Statement
+        run: echo "Running Job1"
