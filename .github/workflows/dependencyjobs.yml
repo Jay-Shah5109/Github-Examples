@@ -2,6 +2,9 @@ name: Job Dependency Test
 
 on: ['push']
 
+env: 
+  ENV_LEVEL_VAR : env level var
+
 jobs:
   job1:
     needs: job2
@@ -14,3 +17,8 @@ jobs:
     steps:
       - name: Job 2 print Statement
         run: echo "Running Job2"
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Accessing env level var here
+        run: echo "Printing env level var = ${ENV_LEVEL_VAR}"
