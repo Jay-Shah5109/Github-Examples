@@ -21,4 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Accessing env level var here
+        if: ${{ env.ENV_LEVEL_VAR == 'env level var' }}
         run: echo "Printing env level var = ${ENV_LEVEL_VAR}"
