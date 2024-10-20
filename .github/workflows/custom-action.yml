@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: Jay-Shah5109/githubaction-javascript@0.0.1
+        uses: Jay-Shah5109/githubaction-javascript@0.0.2
         with:
         # Greet Name
           who-to-greet: 'Jay Shah'
