@@ -23,3 +23,9 @@ jobs:
       - name: Accessing env level var here
         if: ${{ env.ENV_LEVEL_VAR == 'incorrect env level var' }}
         run: echo "Printing env level var = ${ENV_LEVEL_VAR}"
+      - name: Setting env var dynamically
+        # if: ${{ env.ENV_LEVEL_VAR == 'incorrect env level var' }}
+        run: echo "DYNAMIC_ENV_VAR=This is a dynamic env var" >> $GITHUB_ENV
+      - name: Using env var dynamically
+        # if: ${{ env.ENV_LEVEL_VAR == 'incorrect env level var' }}
+        run: echo "Hey There! I'm using dynamic env var here = ${DYNAMIC_ENV_VAR}"
