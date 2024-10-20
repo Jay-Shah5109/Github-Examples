@@ -9,7 +9,7 @@ jobs:
     name: Demo Job To Trigger Script From Workflow
     steps:
       - name: Checkout repository
-        run: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Trigger script placed in another folder in this repository
         run: |
           chmod 755 ./github-actions/myscript.sh
