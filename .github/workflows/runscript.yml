@@ -1,0 +1,17 @@
+name: Run Script From Workflow
+
+on: ['push']
+
+jobs:
+# executeScript in the below step is the job name
+  executeScript:
+    runs-on: ubuntu-latest
+    name: Demo Job To Trigger Script From Workflow
+    steps:
+      - name: Checkout repository
+        run: actions/checkout@v3
+      - name: Trigger script placed in another folder in this repository
+        run: |
+          chmod 755 ./github-actions/myscript.sh
+          ./github-actions/myscript.sh
+
